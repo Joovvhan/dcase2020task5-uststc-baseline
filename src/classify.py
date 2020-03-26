@@ -345,8 +345,8 @@ def train_model(model, X_train, y_train, X_valid, y_valid, output_dir,
                                               save_best_only=True,
                                               monitor='val_loss'))
     # early stopping
-    cb.append(keras.callbacks.EarlyStopping(monitor='val_loss',
-                                            patience=patience))
+    # cb.append(keras.callbacks.EarlyStopping(monitor='val_loss',
+    #                                         patience=patience))
 
     # monitor losses
     history_csv_file = os.path.join(output_dir, 'history.csv')
